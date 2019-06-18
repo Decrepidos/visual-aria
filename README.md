@@ -25,6 +25,7 @@ Visual ARIA Browser Extensions
 The Visual ARIA browser extensions can be used to run Visual ARIA offline for local file access during agile development, or from within private intranets that don't allow public internet access.
 
 * Mozilla: https://addons.mozilla.org/en-US/firefox/addon/visual-aria/
+* Please note the Mozilla Firefox extension is currently offline due to maintenance.
 * Chrome: https://chrome.google.com/webstore/detail/visual-aria/lhbmajchkkmakajkjenkchhnhbadmhmk?hl=en-GB
 
 Note: Visual ARIA browser extensions are developed and maintained by Laurence Lewis: https://www.linkedin.com/in/laurence-lewis-77520365/ 
