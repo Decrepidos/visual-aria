@@ -1,5 +1,7 @@
-# visual-aria - Revision 12/18/2017
+# visual-aria - CSS Revision 08/06/2018, JS 02/26/2019
 Visual ARIA allows engineers, testers, educators, and students to physically observe ARIA usage within web technologies, including ARIA 1.1 structural, live region, and widget roles, proper nesting and focus management, plus requisite and optional supporting attributes to aid in development.
+
+Includes the latest version of the AccName Prototype for auto-detection of accessible names and descriptions in accordance with the AccName spec. For further details, visit: https://github.com/WhatSock/w3c-alternative-text-computation
 
 Visual ARIA
 ========
@@ -16,6 +18,18 @@ Distributed under the terms of the Open Source Initiative OSI - MIT License.
 
 Developed and maintained by: Bryan Garaventa https://www.linkedin.com/in/bgaraventa
 Or on Twitter at https://twitter.com/bryanegaraventa
+
+Visual ARIA Browser Extensions
+-----
+
+The Visual ARIA browser extensions can be used to run Visual ARIA offline for local file access during agile development, or from within private intranets that don't allow public internet access.
+
+* Mozilla: https://addons.mozilla.org/en-US/firefox/addon/visual-aria/
+* Chrome: https://chrome.google.com/webstore/detail/visual-aria/lhbmajchkkmakajkjenkchhnhbadmhmk?hl=en-GB
+
+Note: Visual ARIA browser extensions are developed and maintained by Laurence Lewis: https://www.linkedin.com/in/laurence-lewis-77520365/ 
+Or on Twitter at https://twitter.com/Laurence_Lewis 
+Visual ARIA browser extension support or bug reports should be sent to extensions@a11ycats.com.au 
 
 Project home:
 -----
@@ -71,23 +85,5 @@ http://whatsock.com/training/matrices/visual-aria.htm#instructions-for-use
 Related projects:
 -----
 
-The ARIA Role Conformance Matrices: https://github.com/accdc/aria-matrices
-
-The Accessibility Tree - A Training Guide for Advanced Web Development: https://github.com/accdc/training
-
-AccDC API
-Standalone: https://github.com/accdc/accdc
-For jQuery: https://github.com/accdc/accdc-jquery
-For Dojo: https://github.com/accdc/accdc-dojo
-For MooTools: https://github.com/accdc/accdc-mootools
-
-AccDC Bootstrap
-Standalone: https://github.com/accdc/bootstrap
-For jQuery: https://github.com/accdc/bootstrap-jquery
-For Dojo: https://github.com/accdc/bootstrap-dojo
-For MooTools: https://github.com/accdc/bootstrap-mootools
-
-AccDC Technical Style Guide and Coding Arena
-For AccDC Standalone and jQuery: https://github.com/accdc/tsg
-For Dojo: https://github.com/accdc/tsg-dojo
-For MooTools: https://github.com/accdc/tsg-mootools
+* WhatSock Organization: https://github.com/whatsock
+* Visual ARIA: https://github.com/accdc/visual-aria

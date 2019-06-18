@@ -657,21 +657,11 @@ font-size: .9rem; font-weight: 900;
 content: ' accDescription: \0022' attr(data-ws-bm-desc-prop) '\0022 ';
 }
 
-#ws-bm-aria-matrices-lnk a[data-ws-bm-name-prop]:hover:before {
+#ws-bm-aria-matrices-lnk a:hover:before {
 content: none;
 }
-#ws-bm-aria-matrices-lnk a[data-ws-bm-desc-prop]:hover:after {
+#ws-bm-aria-matrices-lnk a:hover:after {
 content: none;
-}
-
-#ws-bm-aria-matrices-lnk a:before {
-content: ' ? ';
-}
-#ws-bm-aria-matrices-lnk:hover a:before {
-content: ' ARIA Role Matrices ';
-}
-#ws-bm-aria-matrices-lnk a:focus:before {
-content: ' ARIA Role Matrices ';
 }
 
 /*
@@ -8359,6 +8349,12 @@ background-color: black;
 color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Listbox (Up and Down must change aria-activedescendant) ';
+}
+*[role="listbox"]:focus *[role="option"] {
+border: ridge thick orange;
+}
+*[role="listbox"]:focus *[role="option"]:after {
+content: none;
 }
 *[role="listbox"][aria-activedescendant]:focus:before {
 display: table;

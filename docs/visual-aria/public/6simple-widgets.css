@@ -1,5 +1,5 @@
 
-a[href][aria-expanded="false"]:after {
+a[href][aria-expanded="false"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -8,7 +8,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' [ARIA] (collapsed) Link ';
 }
-a[href][aria-expanded="true"]:after {
+a[href][aria-expanded="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -21,7 +21,7 @@ content: ' [ARIA] (expanded) Link ';
 a[href] *:focus {
 border: ridge thick red;
 }
-a[href] *:focus:after {
+a[href] *:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -31,7 +31,7 @@ font-size: .9rem; font-weight: 900;
 content: ' [ARIA] Link (invalid nesting, role=link cannot include embedded active elements) ';
 }
 
-a[href][aria-expanded="false"]:focus:after {
+a[href][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -41,7 +41,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) ';
 }
-a[href][aria-expanded="true"]:focus:after {
+a[href][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -52,7 +52,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) ';
 }
 
-a[href][aria-disabled="true"]:after {
+a[href][aria-disabled="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -61,7 +61,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (disabled) [ARIA] Link ';
 }
-a[href][aria-disabled="true"][aria-expanded="false"]:after {
+a[href][aria-disabled="true"][aria-expanded="false"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -70,7 +70,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (disabled) [ARIA] (collapsed) Link ';
 }
-a[href][aria-disabled="true"][aria-expanded="true"]:after {
+a[href][aria-disabled="true"][aria-expanded="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -82,7 +82,7 @@ content: ' (disabled) [ARIA] (expanded) Link ';
 a[href][aria-disabled="true"]:focus {
 border: ridge thick orange;
 }
-a[href][aria-disabled="true"]:focus:after {
+a[href][aria-disabled="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -92,7 +92,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) [ARIA] Link ';
 }
-a[href][aria-disabled="true"][aria-expanded="false"]:focus:after {
+a[href][aria-disabled="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -102,7 +102,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) [ARIA] (collapsed) Link ';
 }
-a[href][aria-disabled="true"][aria-expanded="true"]:focus:after {
+a[href][aria-disabled="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -116,7 +116,7 @@ content: ' (focused) (disabled) [ARIA] (expanded) Link ';
 a[href][aria-haspopup="true"] {
 border: ridge thick orange;
 }
-a[href][aria-haspopup="true"]:after {
+a[href][aria-haspopup="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -125,7 +125,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (has-menu) [ARIA] Link ';
 }
-a[href][aria-haspopup="true"][aria-expanded="false"]:after {
+a[href][aria-haspopup="true"][aria-expanded="false"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -134,7 +134,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (has-menu) [ARIA] (collapsed) Link ';
 }
-a[href][aria-haspopup="true"][aria-expanded="true"]:after {
+a[href][aria-haspopup="true"][aria-expanded="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -146,7 +146,7 @@ content: ' (has-menu) [ARIA] (expanded) Link ';
 a[href][aria-haspopup="true"]:focus {
 border: ridge thick green;
 }
-a[href][aria-haspopup="true"]:focus:after {
+a[href][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -156,7 +156,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) ';
 }
-a[href][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -166,7 +166,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) ';
 }
-a[href][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -180,7 +180,7 @@ content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, S
 a[href][aria-haspopup="true"][aria-disabled="true"] {
 border: ridge thick green;
 }
-a[href][aria-haspopup="true"][aria-disabled="true"]:after {
+a[href][aria-haspopup="true"][aria-disabled="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -189,7 +189,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (disabled) (has-menu) [ARIA] Link ';
 }
-a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="false"]:after {
+a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="false"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -198,7 +198,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (disabled) (has-menu) [ARIA] (collapsed) Link ';
 }
-a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="true"]:after {
+a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="true"]:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -210,7 +210,7 @@ content: ' (disabled) (has-menu) [ARIA] (expanded) Link ';
 a[href][aria-haspopup="true"][aria-disabled="true"]:focus {
 border: ridge thick orange;
 }
-a[href][aria-haspopup="true"][aria-disabled="true"]:focus:after {
+a[href][aria-haspopup="true"][aria-disabled="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -220,7 +220,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) (has-menu) [ARIA] Link ';
 }
-a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="false"]:focus:after {
+a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -230,7 +230,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) (has-menu) [ARIA] (collapsed) Link ';
 }
-a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="true"]:focus:after {
+a[href][aria-haspopup="true"][aria-disabled="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -241,7 +241,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) (has-menu) [ARIA] (expanded) Link ';
 }
 
-a[href][aria-label]:focus:after {
+a[href][aria-label]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -251,7 +251,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Link (Enter should activate) aria-label=' attr(aria-label) ' ';
 }
-a[href][aria-label][aria-expanded="false"]:focus:after {
+a[href][aria-label][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -261,7 +261,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) aria-label=' attr(aria-label) ' ';
 }
-a[href][aria-label][aria-expanded="true"]:focus:after {
+a[href][aria-label][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -272,7 +272,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) aria-label=' attr(aria-label) ' ';
 }
 
-a[href][aria-label][aria-haspopup="true"]:focus:after {
+a[href][aria-label][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -282,7 +282,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' ';
 }
-a[href][aria-label][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-label][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -292,7 +292,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' ';
 }
-a[href][aria-label][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-label][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -303,7 +303,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' ';
 }
 
-a[href][aria-labelledby]:focus:after {
+a[href][aria-labelledby]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -313,7 +313,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
 }
-a[href][aria-labelledby][aria-expanded="false"]:focus:after {
+a[href][aria-labelledby][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -323,7 +323,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
 }
-a[href][aria-labelledby][aria-expanded="true"]:focus:after {
+a[href][aria-labelledby][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -334,7 +334,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
 }
 
-a[href][aria-labelledby][aria-haspopup="true"]:focus:after {
+a[href][aria-labelledby][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -344,7 +344,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(aria-labelledby) ' ';
 }
-a[href][aria-labelledby][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-labelledby][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -354,7 +354,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(aria-labelledby) ' ';
 }
-a[href][aria-labelledby][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-labelledby][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -365,7 +365,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(aria-labelledby) ' ';
 }
 
-a[href][aria-describedby]:focus:after {
+a[href][aria-describedby]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -375,7 +375,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Link (Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -385,7 +385,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -396,7 +396,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
 }
 
-a[href][aria-describedby][aria-haspopup="true"]:focus:after {
+a[href][aria-describedby][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -406,7 +406,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -416,7 +416,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -427,7 +427,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, Shift+F10 should open menu if different) aria-describedby=' attr(aria-describedby) ' ';
 }
 
-a[href][aria-describedby][aria-label]:focus:after {
+a[href][aria-describedby][aria-label]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -437,7 +437,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Link (Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-label][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-label][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -447,7 +447,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-label][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-label][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -458,7 +458,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
 
-a[href][aria-describedby][aria-label][aria-haspopup="true"]:focus:after {
+a[href][aria-describedby][aria-label][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -468,7 +468,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-label][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-label][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -478,7 +478,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-label][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-label][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -489,7 +489,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, Shift+F10 should open menu if different) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
 }
 
-a[href][aria-describedby][aria-labelledby]:focus:after {
+a[href][aria-describedby][aria-labelledby]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -499,7 +499,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-labelledby][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-labelledby][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -509,7 +509,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (collapsed) Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-labelledby][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-labelledby][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -520,7 +520,7 @@ font-size: .9rem; font-weight: 900;
 content: ' (focused) [ARIA] (expanded) Link (Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
 }
 
-a[href][aria-describedby][aria-labelledby][aria-haspopup="true"]:focus:after {
+a[href][aria-describedby][aria-labelledby][aria-haspopup="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -530,7 +530,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] Link (Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-labelledby][aria-haspopup="true"][aria-expanded="false"]:focus:after {
+a[href][aria-describedby][aria-labelledby][aria-haspopup="true"][aria-expanded="false"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -540,7 +540,7 @@ color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (has-menu) [ARIA] (collapsed) Link (Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
 }
-a[href][aria-describedby][aria-labelledby][aria-haspopup="true"][aria-expanded="true"]:focus:after {
+a[href][aria-describedby][aria-labelledby][aria-haspopup="true"][aria-expanded="true"]:focus:not(a[role]):after {
 display: table;
 height: auto; width: auto;
 position: relative; padding: 1px 0;
@@ -553,6 +553,7 @@ content: ' (focused) (has-menu) [ARIA] (expanded) Link (Enter should activate, S
 
 /*
 ARIA Button, Toggle Button, and Menu Button
+Supported states for aria-pressed: "false", "true", or "mixed"
 Note: The use of aria-haspopup cancels aria-pressed if present.
 The Button role cannot include any embedded active elements.
 http://whatsock.com/training/matrices/#button
@@ -670,6 +671,522 @@ background-color: black;
 color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' (focused) (disabled) [ARIA] (expanded) Button ';
+}
+
+button[aria-pressed="mixed"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed) Toggle Button ';
+}
+button[aria-pressed="mixed"][aria-expanded="true"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed expanded) Toggle Button ';
+}
+button[aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) ';
+}
+button[aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) ';
+}
+button[aria-disabled="true"][aria-pressed="mixed"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+button[aria-disabled="true"][aria-pressed="mixed"][aria-expanded="true"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+button[aria-disabled="true"][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+button[aria-disabled="true"][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+button[aria-label][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' ';
+}
+button[aria-label][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' ';
+}
+button[aria-labelledby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
+}
+button[aria-labelledby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
+}
+button[aria-describedby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
+}
+button[aria-describedby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
+}
+button[aria-describedby][aria-label][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+button[aria-describedby][aria-label][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+button[aria-describedby][aria-labelledby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+button[aria-describedby][aria-labelledby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+
+*[role="button"][aria-pressed="mixed"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed) Toggle Button ';
+}
+*[role="button"][aria-pressed="mixed"][aria-expanded="true"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[role="button"][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) ';
+}
+*[role="button"][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="mixed"]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed) Toggle Button ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) ';
+}
+*[role="button"][aria-disabled="true"][aria-pressed="mixed"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+*[role="button"][aria-disabled="true"][aria-pressed="mixed"][aria-expanded="true"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[role="button"][aria-disabled="true"][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+*[role="button"][aria-disabled="true"][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[data-ws-bm-role="button"][data-ws-bm-aria-disabled="true"][data-ws-bm-aria-pressed="mixed"]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+*[data-ws-bm-role="button"][data-ws-bm-aria-disabled="true"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[data-ws-bm-role="button"][data-ws-bm-aria-disabled="true"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) (disabled) [ARIA] (partially pressed) Toggle Button ';
+}
+*[data-ws-bm-role="button"][data-ws-bm-aria-disabled="true"][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: black;
+color: orange;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) (disabled) [ARIA] (partially pressed expanded) Toggle Button ';
+}
+*[role="button"][aria-label][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' ';
+}
+*[role="button"][aria-label][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-label][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(data-ws-bm-aria-label) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-label][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(data-ws-bm-aria-label) ' ';
+}
+*[role="button"][aria-labelledby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
+}
+*[role="button"][aria-labelledby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-labelledby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(data-ws-bm-aria-labelledby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-labelledby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(data-ws-bm-aria-labelledby) ' ';
+}
+*[role="button"][aria-describedby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
+}
+*[role="button"][aria-describedby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-describedby=' attr(aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+*[role="button"][aria-describedby][aria-label][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+*[role="button"][aria-describedby][aria-label][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(aria-label) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-label][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-label=' attr(data-ws-bm-aria-label) ' aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-label][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-label=' attr(data-ws-bm-aria-label) ' aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+*[role="button"][aria-describedby][aria-labelledby][aria-pressed="mixed"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+*[role="button"][aria-describedby][aria-labelledby][aria-pressed="mixed"][aria-expanded="true"]:focus:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+z-index: 10000;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focused) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(aria-labelledby) ' aria-describedby=' attr(aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-labelledby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(data-ws-bm-aria-labelledby) ' aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-describedby][data-ws-bm-aria-labelledby][data-ws-bm-aria-pressed="mixed"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: white;
+color: green;
+font-size: .9rem; font-weight: 900;
+content: ' (focusable) [ARIA] (partially pressed expanded) Toggle Button (Space or Enter should activate) aria-labelledby=' attr(data-ws-bm-aria-labelledby) ' aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
 }
 
 a[href][role="button"][aria-haspopup="true"] {
@@ -1137,6 +1654,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' [ARIA] (unpressed collapsed) Toggle Button ';
 }
+
 button[aria-pressed="true"]:after {
 display: table;
 height: auto; width: auto;
@@ -2030,6 +2548,7 @@ color: orange;
 font-size: .9rem; font-weight: 900;
 content: ' [ARIA] (unpressed collapsed) Toggle Button ';
 }
+
 *[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="true"]:before {
 display: table;
 height: auto; width: auto;
@@ -3199,6 +3718,28 @@ background-color: white;
 color: green;
 font-size: .9rem; font-weight: 900;
 content: ' (focusable) [ARIA] Menu Button (Space or Enter should activate, Shift+F10 should open menu if different) aria-labelledby=' attr(data-ws-bm-aria-labelledby) ' aria-describedby=' attr(data-ws-bm-aria-describedby) ' ';
+}
+
+a[href][role="button"][aria-pressed="false"][aria-expanded="true"], a[href][role="button"][aria-pressed="true"][aria-expanded="false"], button[aria-pressed="false"][aria-expanded="true"], button[aria-pressed="true"][aria-expanded="false"], *[role="button"][aria-pressed="false"][aria-expanded="true"], *[role="button"][aria-pressed="true"][aria-expanded="false"] {
+border: ridge thick red;
+}
+a[href][role="button"][aria-pressed="false"][aria-expanded="true"]:after, a[href][role="button"][aria-pressed="true"][aria-expanded="false"]:after, button[aria-pressed="false"][aria-expanded="true"]:after, button[aria-pressed="true"][aria-expanded="false"]:after, *[role="button"][aria-pressed="false"][aria-expanded="true"]:after, *[role="button"][aria-pressed="true"][aria-expanded="false"]:after {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: #FFFFE5;
+color: red;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] Button (invalid, pressed and expanded states do not match) aria-pressed=' attr(aria-pressed) ' aria-expanded=' attr(aria-expanded) ' ';
+}
+*[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="false"][data-ws-bm-aria-expanded="true"][data-ws-bm-tabindex]:before, *[data-ws-bm-node-name="img"][data-ws-bm-role="button"][data-ws-bm-aria-pressed="true"][data-ws-bm-aria-expanded="false"][data-ws-bm-tabindex]:before {
+display: table;
+height: auto; width: auto;
+position: relative; padding: 1px 0;
+background-color: #FFFFE5;
+color: red;
+font-size: .9rem; font-weight: 900;
+content: ' [ARIA] Button (invalid, pressed and expanded states do not match) aria-pressed=' attr(data-ws-bm-aria-pressed) ' aria-expanded=' attr(data-ws-bm-aria-expanded) ' ';
 }
 
 /*
@@ -10824,21 +11365,11 @@ font-size: .9rem; font-weight: 900;
 content: ' accDescription: \0022' attr(data-ws-bm-desc-prop) '\0022 ';
 }
 
-#ws-bm-aria-matrices-lnk a[data-ws-bm-name-prop]:hover:before {
+#ws-bm-aria-matrices-lnk a:hover:before {
 content: none;
 }
-#ws-bm-aria-matrices-lnk a[data-ws-bm-desc-prop]:hover:after {
+#ws-bm-aria-matrices-lnk a:hover:after {
 content: none;
-}
-
-#ws-bm-aria-matrices-lnk a:before {
-content: ' ? ';
-}
-#ws-bm-aria-matrices-lnk:hover a:before {
-content: ' ARIA Role Matrices ';
-}
-#ws-bm-aria-matrices-lnk a:focus:before {
-content: ' ARIA Role Matrices ';
 }
 
 *[data-ws-bm-ad-match] {
